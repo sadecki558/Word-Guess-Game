@@ -1,0 +1,17 @@
+body {
+    background-color: black;
+    
+}
+
+.jumbotron {
+    display: block;
+    margin: auto;
+    background-color: black;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    color: green;
+    text-align: center;
+}
