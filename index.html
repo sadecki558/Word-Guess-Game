@@ -11,12 +11,28 @@
 
     <body>
         <div class="jumbotron col-sm-8">
-            <p>Press Any Key To Start</p>
-            <span id="user-key"></span>
-            <p>Wins
+            <p id="demo"></p>
+
+            <script>
+                var i = 0;
+                var txt = "Press Any Key To Start";
+                var speed = 50;
+                
+                function typeWriter() {
+                  if (i < txt.length) {
+                    document.getElementById("demo").innerHTML += txt.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                  }
+                }
+                typeWriter()
+                
+            </script>
+            <span id="user-key" style="color: black"></span>
+            <p>Wins:
             <span id="win_counter"></span>
             </p>
-            <p>Current Word</p>
+            <p>Current Word:</p>
             <p>
                 <span id="placeholder"></span>
             </p>

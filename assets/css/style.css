@@ -7,6 +7,7 @@ body {
     display: block;
     margin: auto;
     background-color: black;
+
 }
 
 p {
@@ -14,4 +15,8 @@ p {
     font-size: 40px;
     color: green;
     text-align: center;
+    border: 1px;
+    border-style: dotted;
+    border-color: green;
+
 }
