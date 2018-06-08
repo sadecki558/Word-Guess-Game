@@ -42,7 +42,7 @@ function entry(event) {
                 for (var i = 0; i < selected_word.length; i++) {
                     if (event.key === selected_word[i]) {
                         correct_guess_array.push(event.key);
-                        placeholder = placeholder.slice(0, i*2) + event.key + placeholder.slice(i*2 + 1);
+                        placeholder = placeholder.slice(0, i) + event.key + placeholder.slice(i + 1);
                         document.getElementById("placeholder").innerHTML = placeholder;
                         guessLength+=1;
                         isWrongGuess = false;
@@ -56,6 +56,7 @@ function entry(event) {
                 }
 
                 if (guessLength === selected_word.length) {
+                    win.play();
                     alert("You Win!");
                     win_counter+=1;
                     document.getElementById("win_counter").innerHTML = win_counter;
