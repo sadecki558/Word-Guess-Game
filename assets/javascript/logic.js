@@ -10,6 +10,9 @@ var guess_counter = 0;
 var guessLength = 0;
 var availableGuess = 10;
 var wrong_guess_array = [];
+//var win_sound = new Audio("/assets/win.mp3");
+
+
 
 function newGame() {
     selected_word = words[Math.floor(Math.random() * words.length)];
@@ -56,12 +59,15 @@ function entry(event) {
                 }
 
                 if (guessLength === selected_word.length) {
+                    win.play();
                     alert("You Win!");
                     win_counter+=1;
                     document.getElementById("win_counter").innerHTML = win_counter;
                     document.getElementById("wrong-select").innerHTML = "";
                     document.getElementById("available-guess").innerHTML = "";
                     document.getElementById("user-key").innerHTML = "";
+                    
+                   
                     newGame();
                 }
             }
